@@ -28,6 +28,7 @@ public class RectangleComponent extends JComponent {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
+	@Override
     public void paintComponent(Graphics g) {
         // Recover Graphics2D
         Graphics2D g2 = (Graphics2D) g;
