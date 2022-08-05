@@ -16,20 +16,37 @@ import javax.swing.JComponent;
 public class P01FourRectanglePrinter extends JComponent {
 
     public static void main(String[] args) {
+        JFrame frame = new JFrame("Four Rectangle");
+        frame.setVisible(true);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(500,500);
+        frame.setLocation(500, 200);
 
+        P01FourRectanglePrinter printer = new P01FourRectanglePrinter();
+        frame.add(printer);
     }
 
-    public void fourRectanglePrinter(Graphics g) {
+    public void paintComponent(Graphics g) {
         Graphics2D g2 = (Graphics2D) g;
         Rectangle box = new Rectangle(10,10,50,50);
 
-        System.out.println(box);
+        g2.draw(box);
+        boxPrint(box);
 
         box.translate(50,0);
-        System.out.println(box);
+        g2.draw(box);
+        boxPrint(box);
+
         box.translate(0,50);
-        System.out.println(box);
+        g2.draw(box);
+        boxPrint(box);
+
         box.translate(-50,0);
-        System.out.println(box);
+        g2.draw(box );
+        boxPrint(box);
+    }
+
+    public static void boxPrint(Rectangle box) {
+        System.out.println("X: " + box.x + ", Y: " + box.y + ", Width: " + box.getWidth() + ", Height: " + box.getHeight());
     }
 }

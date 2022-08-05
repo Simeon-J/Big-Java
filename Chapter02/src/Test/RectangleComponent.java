@@ -14,7 +14,6 @@ import java.awt.Color;
 public class RectangleComponent extends JComponent {
 
     public static void main(String[] args) {
-
         JFrame frame = new JFrame("Two Boxes");
         frame.setSize(500, 500);
 
