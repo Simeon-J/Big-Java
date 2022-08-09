@@ -1,0 +1,29 @@
+Concatenating Strings:
+Class: String
+Return type: String
+Method: contcat(String str)
+Argument: String object
+
+Remove leading/trailing whitespace
+Class: String
+Return type: String
+Method: trim()
+Argument: none
+
+Convert rectangle to string
+Class: Rectangle
+Return type: String
+Method: toString()
+Argument: none
+
+Compute smallest rectangle that contains two rectangles
+Class: Rectangle
+Return type: Rectangle
+Method: union(Rectangle r)
+Argument: Rectangle object
+
+Return random float
+Class: Random
+Return type: float
+Method: nextFloat()
+Argument: none
