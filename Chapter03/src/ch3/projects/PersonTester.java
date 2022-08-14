@@ -10,6 +10,11 @@ public class PersonTester {
         John.befriend(Mary);
         John.befriend(Bob);
         John.befriend(Susan);
+        System.out.println(John.name);
+        System.out.println(John.friendCount);
+        System.out.println(John.getFriendNames());
+        John.unfriend(Bob);
+        System.out.println(John.getFriendCount());
         System.out.println(John.getFriendNames());
     }
 }

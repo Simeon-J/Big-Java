@@ -4,9 +4,9 @@ package ch3.projects;
  * A class representation of a person
  */
 public class Person {
-    private String name;
-    private String friends;
-    private int friendCount;
+    public String name;
+    public String friends;
+    public int friendCount;
 
     /**
      * Creates a person with a name and no friends
@@ -23,7 +23,7 @@ public class Person {
      * @param p name of person to add to list
      */
     public void befriend(Person p) {
-        this.friends.concat(p.name + " ");
+        this.friends = this.friends.concat(p.name + " ");
         friendCount++;
     }
 
@@ -32,7 +32,7 @@ public class Person {
      * @param p name of person to subtract from list
      */
     public void unfriend(Person p) {
-        friends.replace(p.name,"");
+        this.friends = friends.replace(p.name+" ","");
         friendCount--;
     }
 
