@@ -1,42 +1,45 @@
 package ch3.practice;
 
+/**
+ * Creates a value between a range of numbers that can be manipulated
+ */
 public class RangeInput {
-    private int temp;
-    private int max;
-    private int min;
+    public int min;
+    public int max;
+    public int value;
 
     /**
-     * Constructs a RangeInput object
-     * @param max
-     * @param min
+     * Creates a range. initial value is average of ranges
+     * @param min lower bound of range
+     * @param max upper bound of range
      */
-    public RangeInput(int max, int min) {
-        this.max = max;
+    public RangeInput(int min, int max) {
         this.min = min;
-        this.temp = (max + min) / 2;
+        this.max = max;
+        value = (min + max) / 2;
     }
 
-    public int getMax() {
-        return max;
-    }
-
-    public int getMin() {
-        return min;
-    }
-
+    /**
+     * Increases value by 1, but no higher than min
+     */
     public void up() {
-        this.temp++;
-        if (this.temp > max)
-            this.temp = max;
+        if (Math.min(value, max-1) == value)
+            value++;
     }
 
+    /**
+     * Decreases value by 1, but no lower than min
+     */
     public void down() {
-        temp--;
-        if (temp < min)
-            temp = min;
+        if (Math.max(value, min+1) == value)
+            value--;
     }
 
-    public int getTemp() {
-        return this.temp;
+    /**
+     * Returns the current value
+     * @return current value
+     */
+    public int getValue() {
+        return value;
     }
 }
